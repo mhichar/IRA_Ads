@@ -1,5 +1,7 @@
 from nltk.stem.wordnet import WordNetLemmatizer
 from sklearn.feature_extraction.text import TfidfVectorizer, CountVectorizer
+from sklearn.ensemble import GradientBoostingRegressor
+import numpy as np
 
 def nlp_pipe(ads):
     '''
@@ -12,7 +14,7 @@ def nlp_pipe(ads):
     #Create corpus for ads in which conversion rate an ad copy have no nans
     # corp=[ads.loc[x,'ad_copy'] for x in range(len(ads))]
     
-    conv_ads = ads[~ads['conversion_rate'].isna() & ~ads['ad_copy'].isna()]
+    conv_ads = ads[(~ads['conversion_rate'].isna()) & (~ads['ad_copy'].isna())]
     conv_ads.reset_index(inplace=True)
     conv_corp=[conv_ads.loc[x,'ad_copy'] for x in range(len(conv_ads))]
 
@@ -33,3 +35,21 @@ def nlp_pipe(ads):
     words_freq =sorted(words_freq, key = lambda x: x[1], reverse=True)
 
     return tf_conv, count, conv_corp_vect, counted_corp, words_freq
+
+def word_matrix_conversion(vectorizer, X_matrix, y_conversion):
+    '''
+    Takes a vectorizer, X_matrix of word count or tfidf, and y vector
+    for the conversion rate or clicks
+    '''
+    grad = GradientBoostingRegressor()
+    grad.fit(X_matrix, y_conversion)
+
+    #Feature importances
+    feats_imports= grad.feature_importances_
+    feats_names = np.array(vectorizer.get_feature_names())
+    reverse = np.argsort(feats_imports)[::-1]
+
+    n = 10
+    top_n = feats_names[reverse][:n]
+    return top_n
+
