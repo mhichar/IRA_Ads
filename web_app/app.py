@@ -5,10 +5,10 @@ app = Flask(__name__)
 
 @app.route('/')
 def index():
-    return render_template('landing.html')
+    return render_template('landing.html', methods = ['GET'])
 
 
-@app.route('/Af_Am/')
+@app.route('/AFAM/', methods = ['GET'])
 def AFAM():
     return render_template('profile.html')
 
