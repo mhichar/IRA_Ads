@@ -91,18 +91,45 @@
                     <div class="col-md-6 ml-auto mr-auto text-center">
                         <p>Here's some stuff that I'm saying about this particular interest group </p>
                         <br />
-                        <btn class="btn btn-outline-default btn-round"><i class="fa fa-cog"></i> Settings</btn>
+                        <div class="dropdown">
+                            <a href="#" class="btn btn-default dropdown-toggle" data-toggle="dropdown">
+                                Interest Group
+                                <b class="caret"></b>
+                            </a>
+                            <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                                <li class="dropdown-header">Dropdown header</li>
+                                <a class="dropdown-item" href="{{ url_for ('index') }}">Home Page</a>
+                                <a class="dropdown-item" href="{{ url_for('AFAM') }}">African American</a>
+                                <a class="dropdown-item" href="{{ url_for('progressive) }}'">Progressive</a>
+                                <a class="dropdown-item" href="#pk">Latinx</a>
+                                <div class="dropdown-divider"></div>
+                                <a class="dropdown-item" href="#pk">Separated link</a>
+                                <div class="dropdown-divider"></div>
+                                <a class="dropdown-item" href="#pk">Another separated link</a>
+                            </ul>
+                        </div>
                     </div>
                 </div>
                 <br/>
                 <div class="row" >
                     <div class="col-md-6">
-                        <h3>The advertisements that included these 10 words yielded the most clicks per impression:</h3>
+                        <h2>Ads that yielded the most clicks per impression:</h2>
                         <br/>
                         <h4>Join, Black, Follow, Freedom, Click, Videos, Black Excellence, Treats, Absolutely, Repost</h4>
+                        <iframe id="igraph" scrolling="no" style="border:none;" seamless="seamless" src="https://plot.ly/~mhichar/12.embed" height="525" width="100%"></iframe>
                     </div>
                     <div class="col-md-6">
-                        <h2>This is column 2</h2>
+                        <h2>Some Metrics:</h2>
+                        <br/>
+                        <br/>
+                        <br/>
+                        <br/>                        
+                        <h4>Number of ads from sample: 1591 <br/>
+                            Number of clicks: 1.87M <br/>
+                            Amount spent on this sample: $27,257 <br/>
+                        </h4>
+                        <br/>
+                        <br/>
                         <br/>
                         <img class ='img-rounded img-responsive' src="../static/img/ads/af_am0.png">
                     
