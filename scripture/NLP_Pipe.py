@@ -87,15 +87,27 @@ def word_matrix_conversion(vectorizer, X_matrix, y_conversion):
     top_n = feats_names[reverse][:n]
     return top_n
 
+
+def word_relation(multinom, tf):
+    feature_array = np.array(tf.get_feature_names())
+    sorts = np.argsort(multinom.feature_log_prob_[1])[::-1]
+    
+    n = 10
+    top_n = feature_array[sorts][:n]
+    values = multinom.feature_log_prob_[1][sorts]
+    return top_n, values
+
 def word_importances(vectorizer, regressor):
     '''
     Takes a vectorizer and regressor and returns a top n list of 
-    words.  Also returns top n feature importance values.
+    words.  Also returns top n feature importance values.  FOR CONVERSION
     '''
     feats = regressor.feature_importances_
     feature_array = np.array(vectorizer.get_feature_names())
     reverse = np.argsort(feats)[::-1]
+
     n = 10
     top_n = feature_array[reverse][:n]
-    return top_n, feats[reverse][:n]
+    top_n
+    return top_n, feats[reverse]
 

@@ -20,7 +20,7 @@ def AFAM():
 
 @app.route('/Progressive/', methods = ['GET'])
 def progressive():
-    return render_template('')
+    return render_template('progressive.html')
 
 @app.route('/model_form/', methods=['GET', 'POST'])
 def model_form():
