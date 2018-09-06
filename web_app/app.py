@@ -29,39 +29,44 @@ def model_form():
 @app.route('/predict_page/', methods=['GET','POST'])
 def prediction_page():
     # load the model
-    with open('data/mk_model.pkl', 'rb') as f:
-        model = pickle.load(f)
-
-
-
-
-
+    with open('data/af_bay.pkl', 'rb') as f:
+        af_bay = pickle.load(f)
+    with open('data/prog_bay.pkl', 'rb') as f:
+        prog_bay = pickle.load(f)
+    # with open('data/prog_grad.pkl', 'rb') as g:
+    #     prog_grad = pickle.load(g)
+    with open('data/lat_bay.pkl', 'rb') as f:
+        lat_bay = pickle.load(f)
+    with open('data/pat_bay.pkl', 'rb') as f:
+        pat_bay = pickle.load(f)
     
-    #lemmatize
-    wordnet = WordNetLemmatizer()
-    text = request.form['words']
-
-    lemmed_corp=[]
-    for word in range(len(text)):
-        if text[word]!= None:
-            lemmed_corp.append(wordnet.lemmatize(text[word]))
-
+    # #The original mknn model
+    # with open('data/mk_model.pkl', 'rb') as h:
+    #     model = pickle.load(h)
+    
+    #load tf and count vectorizer
+    with open('data/tf.pkl', 'rb') as f:
+        tf = pickle.load(f)
     with open('data/count.pkl', 'rb') as g:
         count = pickle.load(g)
-    matrix = count.transform(lemmed_corp)
+
+    #lemmatize
+    wordnet = WordNetLemmatizer()
+    string = request.form['words']
+    
+    lemm = [wordnet.lemmatize(string)]
+    matrix = tf.transform(lemm)
 
     #Predict categories based on word count
-    preds  = model.predict(matrix)
+    af_pred  = af_bay.predict_proba(matrix)[0][1]
+    prog_pred = prog_bay.predict_proba(matrix)[0][1]
+    lat_pred = lat_bay.predict_proba(matrix)[0][1]
+    pat_pred = pat_bay.predict_proba(matrix)[0][1]
+    
+    return render_template('prediction1.html', text=lemm,\
+     matrix=matrix, af_pred=af_pred, prog_pred=prog_pred, \
+     lat_pred=lat_pred, pat_pred=pat_pred)
 
     
-    return render_template('predict0.html')
-
-    
-
-
-
-
-
-
 if __name__ == '__main__':
     app.run(host='0.0.0.0', port=8080, debug=True)
