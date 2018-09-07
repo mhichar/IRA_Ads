@@ -23,6 +23,11 @@ def AFAM():
 def progressive():
     return render_template('progressive.html')
 
+@app.route('/Patriotism/', methods = ['GET'])
+def patriotism():
+    return render_template('patriotism.html')
+
+    
 @app.route('/model_form/', methods=['GET', 'POST'])
 def model_form():
     return render_template('register.html')

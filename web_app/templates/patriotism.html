@@ -55,7 +55,7 @@
     </nav>
 
     <div class="wrapper">
-        <div class="page-header page-header-xs" data-parallax="true" style="background-image: url('../static/img/soroush-karimi.jpg');">
+        <div class="page-header page-header-xs" data-parallax="true" style="background-image: url('../static/img/ilya-yakover.jpg');">
 			<div class="filter"></div>
 		</div>
         <div class="section profile-content">
@@ -63,7 +63,7 @@
 
                 <div class="owner">
                     <div class="name">
-                        <h2 class="title">Interest Group: Progressive<br /></h2>
+                        <h2 class="title">Interest Group: Patriotism<br /></h2>
                     </div>
                 </div>
 
@@ -73,18 +73,16 @@
                         <br />
                         <div class="dropdown">
                             <a href="#" class="btn btn-default dropdown-toggle" data-toggle="dropdown">
-                                Interest Group
+                                Menu
                                 <b class="caret"></b>
                             </a>
                             <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton">
                                 <li class="dropdown-header">Dropdown header</li>
                                 <a class="dropdown-item" href="{{ url_for ('index') }}">Home Page</a>
                                 <a class="dropdown-item" href="{{ url_for('AFAM') }}">African American</a>
-                                <a class="dropdown-item" href="#pk">Progressive</a>
-                                <a class="dropdown-item" href="#pk">Latinx</a>
-                                <div class="dropdown-divider"></div>
+                                <a class="dropdown-item" href="{{ url_for('progressive') }}">Progressive</a>
+                                <a class="dropdown-item" href="{{ url_for('patriotism')}}">Patriotism</a>
                                 <a class="dropdown-item" href="{{ url_for('model_form') }}">Category Predict</a>
-                                <div class="dropdown-divider"></div>
                                 <a class="dropdown-item" href="#pk">Another separated link</a>
                             </ul>
                         </div>
@@ -96,7 +94,7 @@
                         <h2>Words in ads that yielded the most clicks per impression:</h2>
                         <br/>
                         <h4>Join, Follow, Government, Crusade, Federal, Click, Obama, Atlanta, People, American</h4>
-                            <iframe id="igraph" scrolling="no" style="border:none;" seamless="seamless" src="https://plot.ly/~mhichar/16.embed" height="525" width="100%"></iframe>
+                        <iframe id="igraph" scrolling="no" style="border:none;" seamless="seamless" src="https://plot.ly/~mhichar/16.embed" height="525" width="100%"></iframe>
                     </div>
                     <div class="col-md-6">
                         <h2>Some Metrics:</h2>
@@ -107,6 +105,9 @@
                             Number of clicks: 163k <br/>
                             Amount spent on this sample: $12,355 <br/>
                         </h4>
+                        <br/>
+                        <br/>
+                        <br/>
                         <br/>
                         <img class ='img-rounded img-responsive' src="../static/img/ads/patriotism.png">
                     

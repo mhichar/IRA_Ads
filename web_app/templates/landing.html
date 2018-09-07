@@ -61,17 +61,16 @@
 			        <br />
 			        <div class="dropdown">
                         <a href="#" class="btn btn-default dropdown-toggle" data-toggle="dropdown">
-                            Interest Group
+                            Menu
                             <b class="caret"></b>
                         </a>
                         <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton">
                             <li class="dropdown-header">Dropdown header</li>
+                            <a class="dropdown-item" href="{{ url_for ('index') }}">Home Page</a>
                             <a class="dropdown-item" href="{{ url_for('AFAM') }}">African American</a>
                             <a class="dropdown-item" href="{{ url_for('progressive') }}">Progressive</a>
-                            <a class="dropdown-item" href="#pk">Latinx</a>
-                            <div class="dropdown-divider"></div>
+                            <a class="dropdown-item" href="{{ url_for('patriotism')}}">Patriotism</a>
                             <a class="dropdown-item" href="{{ url_for('model_form') }}">Category Predict</a>
-                            <div class="dropdown-divider"></div>
                             <a class="dropdown-item" href="#pk">Another separated link</a>
                         </ul>
                     </div>
@@ -91,11 +90,9 @@
                             that these advertisements got, and how much money was spent on advertising.
                         </h5>
                         <br>
-                        <a href="#paper-kit" class="btn btn-danger btn-round">For the Motherland</a>
                     </div>
                     
                 </div>
-                <br/><br/>
                 <br/><br/> 
                 <h1>Number of Ads in Interest Groups</h1>
                 <p>As we can see from out sample, the vast majority of the ads were targeted to African Americans, Progressives, and Latin Americans.  
@@ -109,7 +106,7 @@
                     As there were a higher volume of ads targeted towards African Americans, Progressives, and Latin Americans, it is unsurprising that these 
                     ads registered the highest number of clicks.
                 </p>
-                <iframe width="900" height="800" frameborder="0" scrolling="no" src="//plot.ly/~mhichar/2.embed"></iframe>
+                <iframe id="igraph" scrolling="no" style="border:none;" seamless="seamless" src="https://plot.ly/~mhichar/1.embed" height="525" width="100%"></iframe>
                 <br/><br/>
                 <br/><br/>
                 <h1>Interest Group Spending</h1>
@@ -122,88 +119,7 @@
                 
             </div>
         </div>
-
-		<div class="section section-dark text-center">
-            <div class="container">
-                <h2 class="title">Let's talk about us</h2>
-				<div class="row">
-    				<div class="col-md-4">
-                        <div class="card card-profile card-plain">
-                            <div class="card-avatar">
-                                <a href="#avatar"><img src="../static/img/faces/clem-onojeghuo-2.jpg" alt="..."></a>
-                            </div>
-                            <div class="card-body">
-                                <a href="#paper-kit">
-                                    <div class="author">
-                                        <h4 class="card-title">Henry Ford</h4>
-                                        <h6 class="card-category">Product Manager</h6>
-                                    </div>
-                                </a>
-                                <p class="card-description text-center">
-                                Teamwork is so important that it is virtually impossible for you to reach the heights of your capabilities or make the money that you want without becoming very good at it.
-                                </p>
-                            </div>
-                            <div class="card-footer text-center">
-                                <a href="#pablo" class="btn btn-link btn-just-icon btn-neutral"><i class="fa fa-twitter"></i></a>
-                                <a href="#pablo" class="btn btn-link btn-just-icon btn-neutral"><i class="fa fa-google-plus"></i></a>
-                                <a href="#pablo" class="btn btn-link btn-just-icon btn-neutral"><i class="fa fa-linkedin"></i></a>
-                            </div>
-                        </div>
-    				</div>
-
-    				<div class="col-md-4">
-                        <div class="card card-profile card-plain">
-                            <div class="card-avatar">
-                                <a href="#avatar"><img src="../static/img/faces/joe-gardner-2.jpg" alt="..."></a>
-                            </div>
-                            <div class="card-body">
-                                <a href="#paper-kit">
-                                    <div class="author">
-                                        <h4 class="card-title">Sophie West</h4>
-                                        <h6 class="card-category">Designer</h6>
-                                    </div>
-                                </a>
-                                <p class="card-description text-center">
-                                A group becomes a team when each member is sure enough of himself and his contribution to praise the skill of the others. No one can whistle a symphony. It takes an orchestra to play it.
-                                </p>
-                            </div>
-                            <div class="card-footer text-center">
-                                <a href="#pablo" class="btn btn-link btn-just-icon btn-neutral"><i class="fa fa-twitter"></i></a>
-                                <a href="#pablo" class="btn btn-link btn-just-icon btn-neutral"><i class="fa fa-google-plus"></i></a>
-                                <a href="#pablo" class="btn btn-link btn-just-icon btn-neutral"><i class="fa fa-linkedin"></i></a>
-                            </div>
-                        </div>
-    				</div>
-
-    				<div class="col-md-4">
-                        <div class="card card-profile card-plain">
-                            <div class="card-avatar">
-                                <a href="#avatar"><img src="../static/img/faces/erik-lucatero-2.jpg" alt="..."></a>
-                            </div>
-                            <div class="card-body">
-                                <a href="#paper-kit">
-                                    <div class="author">
-                                        <h4 class="card-title">Robert Orben</h4>
-                                        <h6 class="card-category">Developer</h6>
-                                    </div>
-                                </a>
-                                <p class="card-description text-center">
-                                The strength of the team is each individual member. The strength of each member is the team. If you can laugh together, you can work together, silence isn’t golden, it’s deadly.
-                                </p>
-                            </div>
-                            <div class="card-footer text-center">
-                                <a href="#pablo" class="btn btn-link btn-just-icon btn-neutral"><i class="fa fa-twitter"></i></a>
-                                <a href="#pablo" class="btn btn-link btn-just-icon btn-neutral"><i class="fa fa-google-plus"></i></a>
-                                <a href="#pablo" class="btn btn-link btn-just-icon btn-neutral"><i class="fa fa-linkedin"></i></a>
-                            </div>
-                        </div>
-    				</div>
-    			</div>
-        	</div>
-    	</div>
-
-            
-        </div>
+    </div>
 	
 </body>
 

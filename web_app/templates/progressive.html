@@ -73,18 +73,16 @@
                         <br />
                         <div class="dropdown">
                             <a href="#" class="btn btn-default dropdown-toggle" data-toggle="dropdown">
-                                Interest Group
+                                Menu
                                 <b class="caret"></b>
                             </a>
                             <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton">
                                 <li class="dropdown-header">Dropdown header</li>
                                 <a class="dropdown-item" href="{{ url_for ('index') }}">Home Page</a>
                                 <a class="dropdown-item" href="{{ url_for('AFAM') }}">African American</a>
-                                <a class="dropdown-item" href="#pk">Progressive</a>
-                                <a class="dropdown-item" href="#pk">Latinx</a>
-                                <div class="dropdown-divider"></div>
+                                <a class="dropdown-item" href="{{ url_for('progressive') }}">Progressive</a>
+                                <a class="dropdown-item" href="{{ url_for('patriotism')}}">Patriotism</a>
                                 <a class="dropdown-item" href="{{ url_for('model_form') }}">Category Predict</a>
-                                <div class="dropdown-divider"></div>
                                 <a class="dropdown-item" href="#pk">Another separated link</a>
                             </ul>
                         </div>
@@ -95,8 +93,9 @@
                     <div class="col-md-6">
                         <h2>Words in ads that yielded the most clicks per impression:</h2>
                         <br/>
-                        <h4>Repost, Police, Black, Brutality, Video, Man,
-                                Cop, Join, Cops</h4>
+                        <h4>Join, Officer, Follow, Repost, Cops, Video, Stand, Man, Black, http</h4>
+                        <br/>
+                        <br/>
                         <iframe id="igraph" scrolling="no" style="border:none;" seamless="seamless" src="https://plot.ly/~mhichar/14.embed" height="525" width="100%"></iframe>'
                     </div>
                     <div class="col-md-6">

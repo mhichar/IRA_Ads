@@ -80,11 +80,9 @@
                                 <li class="dropdown-header">Dropdown header</li>
                                 <a class="dropdown-item" href="{{ url_for ('index') }}">Home Page</a>
                                 <a class="dropdown-item" href="{{ url_for('AFAM') }}">African American</a>
-                                <a class="dropdown-item" href="#pk">Progressive</a>
-                                <a class="dropdown-item" href="#pk">Latinx</a>
-                                <div class="dropdown-divider"></div>
+                                <a class="dropdown-item" href="{{ url_for('progressive') }}">Progressive</a>
+                                <a class="dropdown-item" href="{{ url_for('patriotism')}}">Patriotism</a>
                                 <a class="dropdown-item" href="{{ url_for('model_form') }}">Category Predict</a>
-                                <div class="dropdown-divider"></div>
                                 <a class="dropdown-item" href="#pk">Another separated link</a>
                             </ul>
                         </div>
