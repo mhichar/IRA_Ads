@@ -109,5 +109,5 @@ def word_importances(vectorizer, regressor):
     n = 10
     top_n = feature_array[reverse][:n]
     top_n
-    return top_n, feats[reverse]
+    return top_n, feats[reverse][:n]
 
