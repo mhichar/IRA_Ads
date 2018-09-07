@@ -1,4 +1,5 @@
 from flask import Flask, request, render_template
+import nltk
 from nltk.stem.wordnet import WordNetLemmatizer
 from sklearn.feature_extraction.text import CountVectorizer
 import numpy as np
