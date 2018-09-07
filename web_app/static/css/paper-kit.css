@@ -103,7 +103,7 @@ h1 small, h2 small, h3 small, h1 .small, h2 .small, h3 .small {
 }
 
 .description {
-  color: #9A9A9A;
+  color: rgb(23, 20, 20);
 }
 
 blockquote small {
@@ -193,7 +193,7 @@ blockquote small {
 
 /*     General overwrite     */
 body {
-  color: #66615b;
+  color: #100f0e;
   font-size: 14px;
   font-weight: 300;
   font-family: 'Montserrat', "Helvetica", Arial, sans-serif;
@@ -1944,7 +1944,7 @@ textarea.form-control {
   margin: 5px 0px;
   padding: 20px 15px;
   font-size: 14px;
-  color: #66615B;
+  color: rgb(254, 252, 250);
   text-transform: uppercase;
 }
 .navbar .nav-link i {
@@ -2061,11 +2061,17 @@ textarea.form-control {
   z-index: 1029;
 }
 
-.navbar-transparent .navbar-brand, [class*="bg"] .navbar-brand {
+[class*="bg"] .navbar-brand {
+  color: rgba(16, 15, 15, 0.85);
+  opacity: 0.9;
+  filter: alpha(opacity=90);
+}
+.navbar-transparent .navbar-brand,  {
   color: rgb(0, 0, 0);
   opacity: 0.9;
   filter: alpha(opacity=90);
 }
+
 .navbar-transparent .navbar-brand:focus, .navbar-transparent .navbar-brand:hover, [class*="bg"] .navbar-brand:focus, [class*="bg"] .navbar-brand:hover {
   background-color: transparent;
   opacity: 1;
@@ -2559,7 +2565,7 @@ textarea.form-control {
 .card-register {
   background-color: #FF8F5E;
   border-radius: 8px;
-  color: #fff;
+  color: rgb(16, 15, 15);
   max-width: 350px;
   margin: 120px 0 70px;
   min-height: 400px;
