@@ -4,7 +4,7 @@
 
 In 2016, the Internet Research Agency, the group of so called Russian “trolls”, put out advertisements that could be found on many of the most popular social media platforms.  Many speculated that the purpose for these ads was to meddle in the 2016 Presidential Election, and it was believed by some such as Jackie Speier, that the ads were meant to divide the U.S population along particular issues and beliefs.
 
-    My interest in these advertisements is two sided.  On the one hand, I think its very interesting to take these ads and look at who they are being targeted to and if there are any underlying patterns present.  The second area of interest is from more of a marketing mindset.  I wanted to know which of these ads are getting the most clicks, and what features or factors could be associated with higher click rates.
+My interest in these advertisements is two sided.  On the one hand, I think its very interesting to take these ads and look at who they are being targeted to and if there are any underlying patterns present.  The second area of interest is from more of a marketing mindset.  I wanted to know which of these ads are getting the most clicks, and what features or factors could be associated with higher click rates.
 
     A set of about 3500 advertisements was released by the House Intelligence Committee in May of this year(2018).  These advertisements were seperated into text with pdftotext by a github user russian-ad-explorer and put into a json file.
 
