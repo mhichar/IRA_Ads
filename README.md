@@ -1,6 +1,6 @@
 # IRA_Ads
 
-![Alt text](imgs/Screen Shot 2018-11-08 at 3.07.11 PM.png)
+![Alt text](https://raw.githubusercontent.com/mhichar/IRA_Ads/master/imgs/Screen%20Shot%202018-11-08%20at%203.07.11%20PM.png)
 
 “America, we have a problem,” said Representative Jackie Speier, a California Democrat who sits on the House committee. “We basically have the brightest minds of our tech community here and Russia was able to weaponize your platforms to divide us, to dupe us and to discredit democracy.”
 
@@ -11,8 +11,12 @@
    A set of about 3500 advertisements was released by the House Intelligence Committee in May of this year(2018).  These advertisements were seperated into text with pdftotext by a github user russian-ad-explorer and put into a json file.
 
    In analyzing the data, I first assembled some general statistics about the advertisements and grouped them by the interest categories that they were targeted towards.  I found what I considered to be the most interesting interest groups based on the number of ads, the number of total clicks, and the amount of money that was spent advertising towards that interest group.
+   
+  ![Alt text](https://raw.githubusercontent.com/mhichar/IRA_Ads/master/imgs/Screen%20Shot%202018-11-08%20at%203.11.20%20PM.png)
 
    After I found the most pertinent groups, I decided to look at what factors would get some ads more clicks than others, and focused on the words contained in the body of the ads’ text.  Using Natural Language Processing techniques, vectorized the ads to reflect the presence and frequency of certain words.  For each interest category I picked, I created a model that predicted the probability of the words in an advertisement being targeted towards a particular interest group.  This has somewhat limited applications due to number of samples for some of the groups, but nonetheless yielded interesting results.  Certain words could be seen to have a higher probability of being present in ads targeted towards certain groups.
+   
+![Alt text](https://raw.githubusercontent.com/mhichar/IRA_Ads/master/imgs/Screen%20Shot%202018-11-08%20at%203.11.51%20PM.png)
 
    In addition, for each interest group I selected, I created a model that modeled which words were present in advertisements with the highest conversion rate of clicks per impression.  Some of these words were unsurprising, such as the words “join” and “follow” being present in many of the models; but others were less trivial.
 
