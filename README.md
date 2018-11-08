@@ -1,6 +1,6 @@
 # IRA_Ads
 
-![picture](imgs/Screen Shot 2018-11-08 at 3.07.11 PM.png.png)
+![Alt Text](imgs/Screen Shot 2018-11-08 at 3.07.11 PM.png.png)
 
 “America, we have a problem,” said Representative Jackie Speier, a California Democrat who sits on the House committee. “We basically have the brightest minds of our tech community here and Russia was able to weaponize your platforms to divide us, to dupe us and to discredit democracy.”
 
