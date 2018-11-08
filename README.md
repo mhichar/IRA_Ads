@@ -1,5 +1,7 @@
 # IRA_Ads
 
+![picture](imgs/Screen Shot 2018-11-08 at 3.07.11 PM.png.png)
+
 “America, we have a problem,” said Representative Jackie Speier, a California Democrat who sits on the House committee. “We basically have the brightest minds of our tech community here and Russia was able to weaponize your platforms to divide us, to dupe us and to discredit democracy.”
 
    In 2016, the Internet Research Agency, the group of so called Russian “trolls”, put out advertisements that could be found on many of the most popular social media platforms.  Many speculated that the purpose for these ads was to meddle in the 2016 Presidential Election, and it was believed by some such as Jackie Speier, that the ads were meant to divide the U.S population along particular issues and beliefs.
